@@ -1,10 +1,17 @@
 <resources>
     <string name="app_name">Thumb It</string>
     <string name="hyfen">-</string>
-    <color name="player_one_colour">#27ae60</color>
-    <color name="player_two_colour">#e67e22</color>
+    <string name="play_against_time">PLAY AGAINST TIME</string>
+    <string name="play_first_to_100">PLAY FIRST TO 100</string>
+
+    <color name="player_one_colour">#f1c40f</color>
+    <color name="player_two_colour">#d35400</color>
     <color name="score_board">#ecf0f1</color>
     <color name="hyfen_color">#2c3e50</color>
+    <!---->
+    <!---->
+    <!---->
+    <!---->
     <!--This is for font awesome-->
     <string name="fa_glass">&#xf000;</string>
     <string name="fa_music">&#xf001;</string>
