@@ -14,12 +14,20 @@ import butterknife.ButterKnife;
 
 public class HomePage extends AppCompatActivity {
 
+    @Bind(R.id.thumbText)
+    TextView mThumbText;
+
+    @Bind(R.id.tagLineText)
+    TextView mTagLineText;
+
     @Bind(R.id.firstTo100Text)
     TextView mFirstTo100Text;
 
     @Bind(R.id.againstTimeText)
     TextView mAgainstTimeText;
 
+    @Bind(R.id.helpText)
+    TextView mHelpText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +42,9 @@ public class HomePage extends AppCompatActivity {
 
         mFirstTo100Text.setTypeface(dotBold);
         mAgainstTimeText.setTypeface(dotBold);
+        mHelpText.setTypeface(dotBold);
+        mThumbText.setTypeface(dotBold);
+        mTagLineText.setTypeface(dotBold);
 
         mFirstTo100Text.setOnClickListener(new View.OnClickListener() {
             @Override

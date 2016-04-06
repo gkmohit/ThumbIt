@@ -1,37 +1,79 @@
-<LinearLayout
-    android:layout_height="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.6"
+        android:background="@color/player_one_colour">
+
+        <TextView
+            android:id="@+id/thumbText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textAllCaps="true"
+            android:textColor="@color/player_two_colour"
+            android:textSize="@dimen/app_name_text_size" />
+
+        <TextView
+            android:id="@+id/tagLineText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/thumbText"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/app_tag_line_text"
+            android:textColor="@color/player_two_colour"
+            android:textSize="@dimen/app_tagline_text" />
+
+    </RelativeLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="@color/player_one_colour">
-        <!--TODO PUT THUMB IT PICTURE-->
+        android:background="@color/player_two_colour"
+        android:orientation="vertical">
+
         <TextView
+            android:id="@+id/firstTo100Text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/play_first_to_100"
-            android:textSize="@dimen/home_page_text_size"
             android:layout_gravity="bottom|right"
             android:gravity="bottom|right"
-            android:id="@+id/firstTo100Text"
-            android:textColor="@color/player_two_colour"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="@color/player_two_colour">
+            android:text="@string/play_first_to_100"
+            android:textAllCaps="true"
+            android:textColor="@color/player_one_colour"
+            android:textSize="@dimen/home_page_text_size" />
+
         <TextView
+            android:id="@+id/againstTimeText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/home_page_text_size"
-            android:text="@string/play_against_time"
             android:layout_gravity="top|right"
             android:gravity="bottom|right"
-            android:id="@+id/againstTimeText"
-            android:textColor="@color/player_one_colour"/>
+            android:text="@string/play_against_time"
+            android:textAllCaps="true"
+            android:textColor="@color/player_one_colour"
+            android:textSize="@dimen/home_page_text_size" />
+
+        <TextView
+            android:id="@+id/helpText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top|right"
+            android:gravity="top|right"
+            android:text="@string/help"
+            android:textAllCaps="true"
+            android:textColor="@color/player_one_colour"
+            android:textSize="@dimen/home_page_text_size" />
     </LinearLayout>
-    </LinearLayout>
+</LinearLayout>

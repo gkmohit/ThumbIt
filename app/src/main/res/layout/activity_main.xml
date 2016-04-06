@@ -4,15 +4,29 @@
     android:orientation="vertical"
     android:weightSum="3">
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/playerOne"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.85"
+        android:clickable="false"
         android:background="@color/player_one_colour"
         android:orientation="horizontal">
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/playerOneWinnerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/winner"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/player_two_colour"
+            android:textSize="@dimen/end_game_text_size" />
+
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,13 +47,13 @@
             android:textSize="@dimen/score_text_size" />
 
         <TextView
+            android:id="@+id/hyfenText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1.7"
             android:background="@color/score_board"
             android:gravity="center_vertical|center"
             android:text="@string/hyfen"
-            android:id="@+id/hyfenText"
             android:textColor="@color/hyfen_color"
             android:textSize="@dimen/score_text_size" />
 
@@ -54,17 +68,29 @@
             android:gravity="center|center_vertical"
             android:text="0"
             android:textColor="@color/player_two_colour"
-
             android:textSize="@dimen/score_text_size" />
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/playerTwo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.85"
+        android:clickable="false"
         android:background="@color/player_two_colour"
         android:orientation="horizontal">
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/playerTwoWinnerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/winner"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/player_one_colour"
+            android:textSize="@dimen/end_game_text_size" />
+    </RelativeLayout>
 </LinearLayout>

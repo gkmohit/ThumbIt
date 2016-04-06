@@ -1,8 +1,13 @@
 <resources>
     <string name="app_name">Thumb It</string>
     <string name="hyfen">-</string>
-    <string name="play_against_time">PLAY AGAINST TIME</string>
-    <string name="play_first_to_100">PLAY FIRST TO 100</string>
+    <string name="play_against_time">TIME ATTACK</string>
+    <string name="play_first_to_100">FIRST TO 100</string>
+    <string name="help">help</string>
+    <string name="winner">winner</string>
+    <string name="play_again">play again</string>
+    <string name="app_tag_line_text">Lets your thumbs talk.</string>
+    <string name="start_tapping_text">Start tapping</string>
 
     <color name="player_one_colour">#f1c40f</color>
     <color name="player_two_colour">#d35400</color>
