@@ -9,8 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.85"
-        android:clickable="false"
         android:background="@color/player_one_colour"
+        android:clickable="false"
         android:orientation="horizontal">
 
         <TextView
@@ -19,12 +19,28 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
+            android:clickable="false"
             android:gravity="center"
+            android:rotation="180"
             android:text="@string/winner"
             android:textAllCaps="true"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/player_two_colour"
             android:textSize="@dimen/end_game_text_size" />
+
+        <TextView
+            android:id="@+id/playerOneFinalScoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/playerOneWinnerText"
+            android:layout_centerHorizontal="true"
+            android:clickable="false"
+            android:rotation="180"
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/player_two_colour"
+            android:textSize="@dimen/end_game_text_size"
+            android:visibility="invisible" />
 
     </RelativeLayout>
 
@@ -43,6 +59,7 @@
             android:background="@color/score_board"
             android:gravity="center|center_vertical"
             android:text="0"
+            android:clickable="false"
             android:textColor="@color/player_one_colour"
             android:textSize="@dimen/score_text_size" />
 
@@ -67,6 +84,7 @@
             android:background="@color/score_board"
             android:gravity="center|center_vertical"
             android:text="0"
+            android:clickable="false"
             android:textColor="@color/player_two_colour"
             android:textSize="@dimen/score_text_size" />
     </LinearLayout>
@@ -76,8 +94,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.85"
-        android:clickable="false"
         android:background="@color/player_two_colour"
+        android:clickable="false"
         android:orientation="horizontal">
 
         <TextView
@@ -86,11 +104,25 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
+            android:clickable="false"
             android:gravity="center"
             android:text="@string/winner"
             android:textAllCaps="true"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/player_one_colour"
             android:textSize="@dimen/end_game_text_size" />
+
+        <TextView
+            android:id="@+id/playerTwoFinalScoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/playerTwoWinnerText"
+            android:layout_centerHorizontal="true"
+            android:clickable="false"
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/player_one_colour"
+            android:textSize="@dimen/end_game_text_size"
+            android:visibility="invisible" />
     </RelativeLayout>
 </LinearLayout>

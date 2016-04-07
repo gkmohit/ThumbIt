@@ -29,6 +29,15 @@ public class HomePage extends AppCompatActivity {
     @Bind(R.id.helpText)
     TextView mHelpText;
 
+    @Bind(R.id.signatureText)
+    TextView mSignatureText;
+
+    @Bind(R.id.createdWithText)
+    TextView mCreatedWithText;
+
+    @Bind(R.id.inTorontoText)
+    TextView mInTorontoText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,11 +49,16 @@ public class HomePage extends AppCompatActivity {
         Typeface dotBold = Typeface.createFromAsset(getAssets(), "dotBold.TTF"); //Dot Bold
         Typeface dotMatrix = Typeface.createFromAsset(getAssets(), "dotMatrix.TTF"); //Dot Matrix
 
+        //Setting font typeface
         mFirstTo100Text.setTypeface(dotBold);
         mAgainstTimeText.setTypeface(dotBold);
         mHelpText.setTypeface(dotBold);
         mThumbText.setTypeface(dotBold);
         mTagLineText.setTypeface(dotBold);
+        mCreatedWithText.setTypeface(dotBold);
+        mInTorontoText.setTypeface(dotBold);
+        mSignatureText.setTypeface(fontAwesome);
+
 
         mFirstTo100Text.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,5 +68,8 @@ public class HomePage extends AppCompatActivity {
                 HomePage.this.startActivity(myIntent);
             }
         });
+
+        mSignatureText.setText(" " + getResources().getString(R.string.fa_heart) + " ");
     }
+
 }

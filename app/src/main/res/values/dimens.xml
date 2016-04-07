@@ -7,4 +7,5 @@
     <dimen name="end_game_text_size">50sp</dimen>
     <dimen name="app_name_text_size">60sp</dimen>
     <dimen name="app_tagline_text">25sp</dimen>
+    <dimen name="play_again_text_size">25sp</dimen>
 </resources>
