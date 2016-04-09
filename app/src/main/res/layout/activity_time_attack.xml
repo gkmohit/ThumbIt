@@ -1,0 +1,33 @@
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.9"
+        android:background="@color/player_one_colour"
+        android:id="@+id/playerOne"
+        >
+
+    </RelativeLayout>
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/countdownProgressBar"
+        android:layout_weight="1.5"
+        android:progress="70"
+        android:background="@color/progress_bar_color_start"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.9"
+        android:id="@+id/playerTwo"
+        android:background="@color/player_two_colour">
+
+    </RelativeLayout>
+</LinearLayout>

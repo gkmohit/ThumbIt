@@ -69,6 +69,14 @@ public class HomePage extends AppCompatActivity {
             }
         });
 
+        mAgainstTimeText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(HomePage.this, TimeAttackActivity.class);
+                //myIntent.putExtra("key", value); //Optional parameters
+                HomePage.this.startActivity(myIntent);
+            }
+        });
         mSignatureText.setText(" " + getResources().getString(R.string.fa_heart) + " ");
     }
 

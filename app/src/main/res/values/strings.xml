@@ -13,10 +13,7 @@
     <string name="play_again">Play\nAgain</string>
     <string name="return_home">Return\nHome</string>
 
-    <color name="player_one_colour">#f1c40f</color>
-    <color name="player_two_colour">#d35400</color>
-    <color name="score_board">#ecf0f1</color>
-    <color name="hyfen_color">#2c3e50</color>
+
     <!---->
     <!---->
     <!---->
