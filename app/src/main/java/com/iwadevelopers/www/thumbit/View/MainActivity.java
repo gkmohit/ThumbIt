@@ -108,20 +108,13 @@ public class MainActivity extends AppCompatActivity {
                             Log.d(TAG, "player one clicked " + playerOneScore[0]);
                         } else{
                             Log.d(TAG, "PLAYER ONE WINS");
+
                             //Setting texts
                             mPlayerOneWinnerText.setText(R.string.winner);
                             mPlayerTwoWinnerText.setText(R.string.you_lost);
                             mPlayerOneFinalScore.setText(playerOneScore[0] + "");
                             mPlayerTwoFinalScore.setText(playerTwoScore[0] + "");
-                            mPlayerOneScoreText.setText(getResources().getString(R.string.play_again));
-                            mPlayerTwoScoreText.setText(getResources().getString(R.string.return_home));
-                            mPlayerOneScoreText.setTextSize(getResources().getDimension(R.dimen.play_again_text_size));
-                            mPlayerTwoScoreText.setTextSize(getResources().getDimension(R.dimen.play_again_text_size));
-                            //Setting Visibility
-                            mPlayerOneWinnerText.setVisibility(View.VISIBLE);
-                            mPlayerTwoWinnerText.setVisibility(View.VISIBLE);
-                            mPlayerOneFinalScore.setVisibility(View.VISIBLE);
-                            mPlayerTwoFinalScore.setVisibility(View.VISIBLE);
+                            setScoreAndWInner();
                             //Setting clickable
                             setClickable(mPlayerOne, false);
                             setClickable(mPlayerTwo, false);
@@ -149,16 +142,7 @@ public class MainActivity extends AppCompatActivity {
                             mPlayerOneWinnerText.setText(R.string.you_lost);
                             mPlayerOneFinalScore.setText(playerOneScore[0] + "");
                             mPlayerTwoFinalScore.setText(playerTwoScore[0] + "");
-                            mPlayerOneScoreText.setText(getResources().getString(R.string.play_again));
-                            mPlayerTwoScoreText.setText(getResources().getString(R.string.return_home));
-                            mPlayerOneScoreText.setTextSize(getResources().getDimension(R.dimen.play_again_text_size));
-                            mPlayerTwoScoreText.setTextSize(getResources().getDimension(R.dimen.play_again_text_size));
-
-                            //Setting Visibility
-                            mPlayerOneWinnerText.setVisibility(View.VISIBLE);
-                            mPlayerTwoWinnerText.setVisibility(View.VISIBLE);
-                            mPlayerOneFinalScore.setVisibility(View.VISIBLE);
-                            mPlayerTwoFinalScore.setVisibility(View.VISIBLE);
+                            setScoreAndWInner();
                             //Setting clickable
                             setClickable(mPlayerOne, false);
                             setClickable(mPlayerTwo, false);
@@ -188,6 +172,19 @@ public class MainActivity extends AppCompatActivity {
         }.start();
 
 
+    }
+
+    public void setScoreAndWInner() {
+        mPlayerOneScoreText.setText(getResources().getString(R.string.play_again));
+        mPlayerTwoScoreText.setText(getResources().getString(R.string.return_home));
+        mPlayerOneScoreText.setTextSize(getResources().getDimension(R.dimen.play_again_text_size));
+        mPlayerTwoScoreText.setTextSize(getResources().getDimension(R.dimen.play_again_text_size));
+
+        //Setting Visibility
+        mPlayerOneWinnerText.setVisibility(View.VISIBLE);
+        mPlayerTwoWinnerText.setVisibility(View.VISIBLE);
+        mPlayerOneFinalScore.setVisibility(View.VISIBLE);
+        mPlayerTwoFinalScore.setVisibility(View.VISIBLE);
     }
 
     public void setClickable(RelativeLayout inLayout, Boolean inValue){
