@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     TextView mPlayerTwoFinalScore;
 
 
-    public final int WINNER_SCORE = 60;
+    public final int WINNER_SCORE = 10;
     public static boolean isDone = false;
 
     @Override
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                             mPlayerOneWinnerText.setVisibility(View.INVISIBLE);
                             mPlayerTwoWinnerText.setVisibility(View.INVISIBLE);
                             Log.d(TAG, "player one clicked " + playerOneScore[0]);
-                        } else{
+                        } else if(playerOneScore[0] > WINNER_SCORE){
                             Log.d(TAG, "PLAYER ONE WINS");
 
                             //Setting texts
@@ -177,8 +177,8 @@ public class MainActivity extends AppCompatActivity {
     public void setScoreAndWInner() {
         mPlayerOneScoreText.setText(getResources().getString(R.string.play_again));
         mPlayerTwoScoreText.setText(getResources().getString(R.string.return_home));
-        mPlayerOneScoreText.setTextSize(getResources().getDimension(R.dimen.play_again_text_size));
-        mPlayerTwoScoreText.setTextSize(getResources().getDimension(R.dimen.play_again_text_size));
+//        mPlayerOneScoreText.setTextSize(getResources().getDimension(R.dimen.play_again_text_size));
+//        mPlayerTwoScoreText.setTextSize(getResources().getDimension(R.dimen.play_again_text_size));
 
         //Setting Visibility
         mPlayerOneWinnerText.setVisibility(View.VISIBLE);

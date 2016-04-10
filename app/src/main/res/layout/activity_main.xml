@@ -57,11 +57,11 @@
             android:layout_centerHorizontal="true"
             android:layout_weight="1"
             android:background="@color/score_board"
+            android:clickable="false"
             android:gravity="center|center_vertical"
             android:text="0"
-            android:clickable="false"
             android:textColor="@color/player_one_colour"
-            android:textSize="@dimen/score_text_size" />
+            android:textSize="@dimen/play_again_text_size" />
 
         <TextView
             android:id="@+id/hyfenText"
@@ -82,11 +82,11 @@
             android:layout_centerHorizontal="true"
             android:layout_weight="1"
             android:background="@color/score_board"
+            android:clickable="false"
             android:gravity="center|center_vertical"
             android:text="0"
-            android:clickable="false"
             android:textColor="@color/player_two_colour"
-            android:textSize="@dimen/score_text_size" />
+            android:textSize="@dimen/play_again_text_size" />
     </LinearLayout>
 
     <RelativeLayout

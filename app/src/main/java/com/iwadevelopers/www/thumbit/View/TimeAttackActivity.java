@@ -128,22 +128,24 @@ public class TimeAttackActivity extends AppCompatActivity {
                         mPlayerTwo.setClickable(false);
                         //Setting scores
                         mPlayerOneScore.setText(playerOneScore[0] + "");
-                        mPlayerTwoScore.setText(playerTwoScore + "");
+                        mPlayerTwoScore.setText(playerTwoScore[0] + "");
                         mTimerText.setVisibility(View.INVISIBLE);
+                        mPlayerOneFinalScore.setText(playerOneScore[0] + "");
+                        mPlayerTwoFinalScore.setText(playerTwoScore[0] + "");
 
                         //Checking for winner
                         if (playerOneScore[0] > playerTwoScore[0]) {
                             mPlayerOneScore.setText(getResources().getString(R.string.winner));
                             mPlayerTwoScore.setText(getResources().getString(R.string.you_lost));
-                        } else {
+                        } else if (playerOneScore[0] < playerTwoScore[0]) {
                             mPlayerTwoScore.setText(getResources().getString(R.string.winner));
                             mPlayerOneScore.setText(getResources().getString(R.string.you_lost));
+                        } else {
+                            mPlayerTwoScore.setText(getResources().getString(R.string.draw));
+                            mPlayerOneScore.setText(getResources().getString(R.string.draw));
                         }
 
-                        mReturnHomeText.setVisibility(View.VISIBLE);
-                        mPlayAgainText.setVisibility(View.VISIBLE);
-                        mPlayerOneScore.setVisibility(View.VISIBLE);
-                        mPlayerTwoScore.setVisibility(View.VISIBLE);
+                        settingVisibilities();
 
                         mReturnHomeText.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -167,5 +169,14 @@ public class TimeAttackActivity extends AppCompatActivity {
                 }.start();
             }
         }.start();
+    }
+
+    public void settingVisibilities() {
+        mPlayerOneFinalScore.setVisibility(View.VISIBLE);
+        mPlayerTwoFinalScore.setVisibility(View.VISIBLE);
+        mReturnHomeText.setVisibility(View.VISIBLE);
+        mPlayAgainText.setVisibility(View.VISIBLE);
+        mPlayerOneScore.setVisibility(View.VISIBLE);
+        mPlayerTwoScore.setVisibility(View.VISIBLE);
     }
 }

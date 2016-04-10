@@ -78,6 +78,15 @@ public class HomePage extends AppCompatActivity {
             }
         });
         mSignatureText.setText(" " + getResources().getString(R.string.fa_heart) + " ");
+
+        mHelpText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(HomePage.this, HelpActivity.class);
+                //myIntent.putExtra("key", value); //Optional parameters
+                HomePage.this.startActivity(myIntent);
+            }
+        });
     }
 
 }

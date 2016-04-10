@@ -13,6 +13,12 @@
     <string name="play_again">Play\nAgain</string>
     <string name="return_home">Return\nHome</string>
     <string name="go">GO</string>
+    <string name="draw">DRAW</string>
+    <string name="go_home">Lets Get Playing</string>
+    <string name="help_text">
+        One, two, three, four, I declare a thumb war. Its a simple game where you click your way to victory with your thumbs only.
+        Don\'t worry, all you need are opposable thumbs, some game spirit and another player. So lets gets thumbing.
+    </string>
 
 
     <!---->
